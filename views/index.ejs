@@ -73,8 +73,15 @@
 
             <div class="card">
                 <p>
-                    <span class="text-left">Server</span>
+                    <span class="text-left">Hostname</span>
                     <span class="text-right code-blk"><code><%= hostname %></code></span>
+                </p>
+
+                <div class="clearfix"></div>
+
+                <p>
+                    <span class="text-left">Node Status</span>
+                    <span class="text-right code-blk"><code><%= loadStatus %></code></span>
                 </p>
 
                 <div class="clearfix"></div>
@@ -82,13 +89,6 @@
                 <p>
                     <span class="text-left">Request IP</span>
                     <span class="text-right code-blk"><code><%= userIp %></code></span>
-                </p>
-
-                <div class="clearfix"></div>
-
-                <p>
-                    <span class="text-left">Swarm Status</span>
-                    <span class="text-right code-blk"><code>OK</code></span>
                 </p>
 
                 <div class="clearfix"></div>
