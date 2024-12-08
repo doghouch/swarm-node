@@ -6,7 +6,7 @@ Shows node information for a node within a Docker swarm.
 
 A quick preview:
 
-![alt](https://cdn.jp.net/2024/December/Screnshot%20%28chrome%29%20at%202024-12-08%20at%2006.47.104%20AM.png)
+![alt](https://cdn.jp.net/2024/December/Screnshot%20%28chrome%29%20at%202024-12-08%20at%2008.12.174%20AM.png)
 
 Feel free to modify anything -- e.g. removing references to `shednet.ca` (my domain), etc.
 
