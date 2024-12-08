@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello, world!</title>
+
+        <link rel="stylesheet" href="https://use.typekit.net/dan5apk.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <style>
+            body {
+                font-family: "indivisible", sans-serif;
+                font-weight: 400;
+                font-style: normal;
+            }
+
+            .container {
+                margin: 0 auto;
+                max-width: 800px;
+                padding: 30px;
+            }
+
+            .card {
+                background-color: #fff;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+                margin-bottom: 20px;
+                padding: 5px 20px;
+            }
+
+            code {
+                background-color: #eee;
+                border: 1px solid #777;
+                border-radius: 3px;
+                font-family: monospace;
+                padding: 0 3px;
+            }
+
+            .clearfix {
+                clear: both;
+            }
+
+            .text-left {
+                float: left;
+            }
+
+            .text-right {
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Hello, world!</h1>
+            <p>You are connected to a test cluster.</p>
+            
+            <br />
+
+            <div class="card">
+                <p>
+                    <span class="text-left">Server</span>
+                    <span class="text-right"><code><%= hostname %></code></span>
+                </p>
+
+                <div class="clearfix"></div>
+
+                <p>
+                    <span class="text-left">Request IP</span>
+                    <span class="text-right"><code><%= userIp %></code></span>
+                </p>
+
+                <div class="clearfix"></div>
+
+                <p>
+                    <span class="text-left">Swarm Status</span>
+                    <span class="text-right"><code>OK</code></span>
+                </p>
+
+                <div class="clearfix"></div>
+
+                <p>
+                    <span class="text-left">Diagnostics Ver.</span>
+                    <span class="text-right"><code><%= version %></code></span>
+                </p>
+            
+                <div class="clearfix"></div>
+
+                <p></p>
+            </div>
+     
+        </div>
+    </body>
+</html>
