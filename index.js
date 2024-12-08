@@ -12,7 +12,6 @@ app.set("view engine", "ejs");
 app.set("views", "./views");
 
 app.get("/", (req, res) => {
-    console.log(process.env);
     var hostname = process.env.HOSTNAME || "Unknown";
     var ip = req.headers["x-forwarded-for"] || req.socket.remoteAddress;
     res.render("index", { hostname: hostname, version: pkg.version, userIp: ip });

@@ -29,11 +29,14 @@
             }
 
             code {
-                background-color: #eee;
-                border: 1px solid #777;
+                background-color: #eef0f3;
+                border: 1px solid #d8dee7;
                 border-radius: 3px;
                 font-family: monospace;
-                padding: 0 3px;
+                display: inline-block;
+                padding: 1px 4px;
+                margin-top: 1px;
+                font-size: 13px;
             }
 
             .clearfix {
@@ -47,40 +50,52 @@
             .text-right {
                 float: right;
             }
+
+            .code-blk {
+                margin-top: -1px; /* hack to centre vertically */
+            }
+
+            .logo {
+                font-family: "embury-text", serif;
+                font-weight: 400;
+                text-decoration: none;
+                color: #477fd8;
+                font-size: 1em;
+            }
         </style>
     </head>
     <body>
         <div class="container">
             <h1>Hello, world!</h1>
-            <p>You are connected to a test cluster.</p>
+            <p>You are connected to a <a href="https://shednet.ca" class="logo">shednet.ca</a> cluster.</p>
             
             <br />
 
             <div class="card">
                 <p>
                     <span class="text-left">Server</span>
-                    <span class="text-right"><code><%= hostname %></code></span>
+                    <span class="text-right code-blk"><code><%= hostname %></code></span>
                 </p>
 
                 <div class="clearfix"></div>
 
                 <p>
                     <span class="text-left">Request IP</span>
-                    <span class="text-right"><code><%= userIp %></code></span>
+                    <span class="text-right code-blk"><code><%= userIp %></code></span>
                 </p>
 
                 <div class="clearfix"></div>
 
                 <p>
                     <span class="text-left">Swarm Status</span>
-                    <span class="text-right"><code>OK</code></span>
+                    <span class="text-right code-blk"><code>OK</code></span>
                 </p>
 
                 <div class="clearfix"></div>
 
                 <p>
                     <span class="text-left">Diagnostics Ver.</span>
-                    <span class="text-right"><code><%= version %></code></span>
+                    <span class="text-right code-blk"><code><%= version %></code></span>
                 </p>
             
                 <div class="clearfix"></div>
