@@ -13,7 +13,7 @@ app.set("views", "./views");
 
 app.get("/", (req, res) => {
     var hostname = process.env.HOSTNAME || "Unknown";
-    var ip = req.headers["x-forwarded-for"] || req.socket.remoteAddress;
+    var ip = req.socket.remoteAddress.replace("::ffff:", ""); // ipv6 isn't supported, seems to show up sometimes
     res.render("index", { hostname: hostname, version: pkg.version, userIp: ip });
   })
 
