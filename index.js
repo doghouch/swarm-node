@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
     var hostname = process.env.HOSTNAME || "Unknown";
     // ipv6 isn't supported, so remove the ::ffff: prefix (shows up some times)
     // too lazy to debug
-    var ip = (req.headers["x-forwarded-for"] || req.socket.remoteAddress).replace("::ffff:", "");
+    var ip = (req.headers["CF-Connecting-IP"] || req.headers["x-forwarded-for"] || req.socket.remoteAddress).replace("::ffff:", "");
     res.render("index", { hostname: hostname, version: pkg.version, userIp: ip });
   })
 
